@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSCLMDataManager", "JSCLMDa
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LMData", "LMData\LMData.sqlproj", "{CEAFDCF5-BBB3-4A6D-BEDA-F9FE874DBC7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSCLMDestopUI", "JSCLMDestopUI\JSCLMDestopUI.csproj", "{CF779E43-A2C4-4E02-B880-CDB7BD4ECE36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{CEAFDCF5-BBB3-4A6D-BEDA-F9FE874DBC7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEAFDCF5-BBB3-4A6D-BEDA-F9FE874DBC7D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CEAFDCF5-BBB3-4A6D-BEDA-F9FE874DBC7D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CF779E43-A2C4-4E02-B880-CDB7BD4ECE36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF779E43-A2C4-4E02-B880-CDB7BD4ECE36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF779E43-A2C4-4E02-B880-CDB7BD4ECE36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF779E43-A2C4-4E02-B880-CDB7BD4ECE36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

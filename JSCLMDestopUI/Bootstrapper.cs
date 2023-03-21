@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using JSCLMDataManager.Library.Internal.DataAccess;
+using System.Data.SqlTypes;
 
 namespace JSCLMDestopUI;
 
@@ -28,6 +30,7 @@ public class Bootstrapper : BootstrapperBase
         _container
             .Singleton<IWindowManager, WindowManager>()
             .Singleton<IEventAggregator, EventAggregator>();
+        
 
         GetType().Assembly.GetTypes()
             .Where(type => type.IsClass)

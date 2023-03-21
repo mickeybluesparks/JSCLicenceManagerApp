@@ -18,7 +18,10 @@
   <ItemGroup>
     <Folder Include="EventModels\" />
     <Folder Include="Helpers\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JSCLMDataManager.Library\JSCLMDataManager.Library.csproj" />
   </ItemGroup>
 
 </Project>

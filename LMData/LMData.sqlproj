@@ -71,4 +71,7 @@
   <ItemGroup>
     <None Include="PublishLocations\LMData.publish.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="LMData.refactorlog" />
+  </ItemGroup>
 </Project>

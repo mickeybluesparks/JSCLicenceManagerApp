@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSCLMDataManager", "JSCLMDataManager\JSCLMDataManager.csproj", "{A695D66B-12AD-47A4-AD62-C09F92925314}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSCLMDataManager", "JSCLMDataManager\JSCLMDataManager.csproj", "{A695D66B-12AD-47A4-AD62-C09F92925314}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LMData", "LMData\LMData.sqlproj", "{CEAFDCF5-BBB3-4A6D-BEDA-F9FE874DBC7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSCLMDestopUI", "JSCLMDestopUI\JSCLMDestopUI.csproj", "{CF779E43-A2C4-4E02-B880-CDB7BD4ECE36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSCLMDestopUI", "JSCLMDestopUI\JSCLMDestopUI.csproj", "{CF779E43-A2C4-4E02-B880-CDB7BD4ECE36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSCLMDataManager.Library", "JSCLMDataManager.Library\JSCLMDataManager.Library.csproj", "{7C78D270-7B00-495E-B595-A198C6BA8A3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{CF779E43-A2C4-4E02-B880-CDB7BD4ECE36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF779E43-A2C4-4E02-B880-CDB7BD4ECE36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF779E43-A2C4-4E02-B880-CDB7BD4ECE36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C78D270-7B00-495E-B595-A198C6BA8A3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C78D270-7B00-495E-B595-A198C6BA8A3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C78D270-7B00-495E-B595-A198C6BA8A3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C78D270-7B00-495E-B595-A198C6BA8A3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

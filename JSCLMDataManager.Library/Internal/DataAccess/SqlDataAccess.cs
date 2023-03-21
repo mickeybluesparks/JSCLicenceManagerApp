@@ -26,7 +26,10 @@ namespace JSCLMDataManager.Library.Internal.DataAccess
             U parameters,
             string connectionId = "Default")
         {
-            using IDbConnection connection = new SqlConnection(_config.GetConnectionString(connectionId));
+
+            string? connectionString = _config!.GetConnectionString(connectionId);
+
+            using IDbConnection connection = new SqlConnection(connectionString!);
 
             return await connection.QueryAsync<T>(storedProcedure, parameters, commandType: CommandType.StoredProcedure);
         }

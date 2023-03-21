@@ -1,5 +1,6 @@
 
 
+using JSCLMDataManager;
 using JSCLMDataManager.Library.DataAccess;
 using JSCLMDataManager.Library.Internal.DataAccess;
 
@@ -7,7 +8,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<ISqlDataAccess, SqlDataAccess>();
@@ -25,8 +25,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
-
-app.MapControllers();
+app.ConfigureCustomerApi();
 
 app.Run();

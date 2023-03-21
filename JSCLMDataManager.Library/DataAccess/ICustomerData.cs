@@ -4,6 +4,12 @@ namespace JSCLMDataManager.Library.DataAccess
 {
     public interface ICustomerData
     {
-        Task<IEnumerable<CustomerDBModel>> GetUsers();
+        Task<IEnumerable<CustomerDBModel>> GetCustomers();
+        Task<CustomerDBModel?> GetCustomer(int id);
+
+        Task InsertCustomer(CustomerDBModel user);
+
+        public Task UpdateCustomer(CustomerDBModel user);
+
     }
 }

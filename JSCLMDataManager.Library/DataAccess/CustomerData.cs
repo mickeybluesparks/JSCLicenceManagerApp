@@ -17,8 +17,28 @@ namespace JSCLMDataManager.Library.DataAccess
             _db = db;
         }
 
-        public Task<IEnumerable<CustomerDBModel>> GetUsers() =>
+        public Task<IEnumerable<CustomerDBModel>> GetCustomers() =>
             _db.LoadData<CustomerDBModel, dynamic>("spCustomer_GetAll", new { });
+
+        public async Task<CustomerDBModel?> GetCustomer(int id)
+        {
+            var results = await _db.LoadData<CustomerDBModel, dynamic>(
+                "spCustomer_Get", new { Id = id });
+
+            if (results == null)
+                return null;
+
+            return results.FirstOrDefault();
+        }
+
+        public Task InsertCustomer(CustomerDBModel user) =>
+            _db.SaveData("spCustomer_Insert", new { user.FirstName, user.LastName, user.EmailAddress, user.IsActive });
+
+        public Task UpdateCustomer(CustomerDBModel user) =>
+            _db.SaveData("spCustomerData_Update", user);
+
+        //public Task DeleteCustomer(int id) =>
+        //    _db.SaveData("spUser_Delete", new { Id = id });
 
     }
 }

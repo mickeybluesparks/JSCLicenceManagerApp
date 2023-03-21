@@ -1,4 +1,4 @@
-﻿namespace JSCLMDataManager.Library.Internal.DataAccess
+﻿namespace JSCLMDataManager.Library.DbAccess
 {
     public interface ISqlDataAccess
     {

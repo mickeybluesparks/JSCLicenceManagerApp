@@ -1,4 +1,4 @@
-﻿using JSCLMDataManager.Library.DataAccess;
+﻿using JSCLMDataManager.Library.Data;
 using JSCLMDataManager.Library.Models;
 
 namespace JSCLMDataManager
@@ -12,7 +12,7 @@ namespace JSCLMDataManager
             app.MapGet("/Customers/{id}", GetCustomer);
             app.MapPost("/Customers", InsertCustomer);
             app.MapPut("/Customers", UpdateCustomer);
-            //app.MapDelete("/Users", DeleteCustomer);
+            app.MapDelete("/Customers", DeleteCustomer);
         }
 
         private static async Task<IResult> GetCustomers(ICustomerData data)
@@ -33,7 +33,11 @@ namespace JSCLMDataManager
             try
             {
                 var results = await data.GetCustomer(id);
-                if (results == null) { return Results.NoContent(); }
+                if (results == null) 
+                { 
+                    return Results.NoContent(); 
+                }
+
                 return Results.Ok(results);
             }
             catch (Exception ex)
@@ -43,11 +47,11 @@ namespace JSCLMDataManager
 
         }
 
-        private static async Task<IResult> InsertCustomer(CustomerDBModel user, ICustomerData data)
+        private static async Task<IResult> InsertCustomer(CustomerDBModel Customer, ICustomerData data)
         {
             try
             {
-                await data.InsertCustomer(user);
+                await data.InsertCustomer(Customer);
                 return Results.Ok(data);
             }
             catch (Exception ex)
@@ -57,11 +61,11 @@ namespace JSCLMDataManager
 
         }
 
-        private static async Task<IResult> UpdateCustomer(CustomerDBModel user, ICustomerData data)
+        private static async Task<IResult> UpdateCustomer(CustomerDBModel Customer, ICustomerData data)
         {
             try
             {
-                await data.UpdateCustomer(user);
+                await data.UpdateCustomer(Customer);
                 return Results.Ok(data);
             }
             catch (Exception ex)
@@ -71,18 +75,20 @@ namespace JSCLMDataManager
 
         }
 
-        //private static async Task<IResult> DeleteCustomer(int id, ICustomerData data)
-        //{
-        //    try
-        //    {
-        //        await data.DeleteCustomer(id);
-        //        return Results.Ok(data);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return Results.Problem(ex.Message);
-        //    }
-        //}
+        private static async Task<IResult> DeleteCustomer(int id, ICustomerData data)
+        {
+            //try
+            //{
+            //    await data.DeleteCustomer(id);
+            //    return Results.Ok(data);
+            //}
+            //catch (Exception ex)
+            //{
+            //    return Results.Problem(ex.Message);
+            //}
+
+            return Results.NotFound(data);
+        }
 
     }
 }

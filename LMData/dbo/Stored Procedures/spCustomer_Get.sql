@@ -2,7 +2,7 @@
 	@Id int
 AS
 begin
-	SELECT Id, FirstName, LastName, EmailAddress
+	SELECT Id, FirstName, LastName, EmailAddress, IsActive
 	from dbo.CustomerData
 	Where Id = @Id;
 end

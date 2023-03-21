@@ -1,4 +1,4 @@
-﻿using JSCLMDataManager.Library.Internal.DataAccess;
+﻿using JSCLMDataManager.Library.DbAccess;
 using JSCLMDataManager.Library.Models;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JSCLMDataManager.Library.DataAccess
+namespace JSCLMDataManager.Library.Data
 {
     public class CustomerData : ICustomerData
     {

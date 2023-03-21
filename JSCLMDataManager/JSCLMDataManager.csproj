@@ -4,12 +4,12 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <AssemblyVersion>1.0.2303.9</AssemblyVersion>
-    <FileVersion>2023.3.0.9</FileVersion>
+    <AssemblyVersion>1.0.2303.2</AssemblyVersion>
+    <FileVersion>2023.3.0.2</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>

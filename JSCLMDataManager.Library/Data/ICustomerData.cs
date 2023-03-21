@@ -1,6 +1,6 @@
 ﻿using JSCLMDataManager.Library.Models;
 
-namespace JSCLMDataManager.Library.DataAccess
+namespace JSCLMDataManager.Library.Data
 {
     public interface ICustomerData
     {

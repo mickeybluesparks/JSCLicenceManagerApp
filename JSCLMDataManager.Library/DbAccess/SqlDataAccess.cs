@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JSCLMDataManager.Library.Internal.DataAccess
+namespace JSCLMDataManager.Library.DbAccess
 {
     public class SqlDataAccess : ISqlDataAccess
     {

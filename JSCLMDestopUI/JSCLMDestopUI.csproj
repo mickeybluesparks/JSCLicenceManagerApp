@@ -6,8 +6,8 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <AssemblyName>JSCLicenceManager</AssemblyName>
-    <AssemblyVersion>1.0.2303.4</AssemblyVersion>
-    <FileVersion>2023.3.0.4</FileVersion>
+    <AssemblyVersion>1.0.2303.6</AssemblyVersion>
+    <FileVersion>2023.3.0.6</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\JSCLMDataManager.Library\JSCLMDataManager.Library.csproj" />
+    <ProjectReference Include="..\JSCLMDestopUI.Library\JSCLMDestopUI.Library.csproj" />
   </ItemGroup>
 
 </Project>

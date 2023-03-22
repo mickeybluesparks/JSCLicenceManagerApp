@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSCLMDestopUI", "JSCLMDesto
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSCLMDataManager.Library", "JSCLMDataManager.Library\JSCLMDataManager.Library.csproj", "{7C78D270-7B00-495E-B595-A198C6BA8A3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSCLMDataManager", "JSCLMDataManager\JSCLMDataManager.csproj", "{DB1E7B51-82F1-469F-9E45-9BB51D0A7001}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSCLMDataManager", "JSCLMDataManager\JSCLMDataManager.csproj", "{DB1E7B51-82F1-469F-9E45-9BB51D0A7001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSCLMDestopUI.Library", "JSCLMDestopUI.Library\JSCLMDestopUI.Library.csproj", "{65F6F512-3C42-4F2F-93FF-F445197542DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{DB1E7B51-82F1-469F-9E45-9BB51D0A7001}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB1E7B51-82F1-469F-9E45-9BB51D0A7001}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB1E7B51-82F1-469F-9E45-9BB51D0A7001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F6F512-3C42-4F2F-93FF-F445197542DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F6F512-3C42-4F2F-93FF-F445197542DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F6F512-3C42-4F2F-93FF-F445197542DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F6F512-3C42-4F2F-93FF-F445197542DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

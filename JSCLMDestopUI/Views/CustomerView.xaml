@@ -116,7 +116,7 @@
                         <ColumnDefinition SharedSizeGroup="A"/>
                     </Grid.ColumnDefinitions>
 
-                    <Button Grid.Column="0"    
+                    <Button Grid.Column="0" x:Name="AddNewCustomer"   
                     Content = "Add new Customer"                            
                             FontSize = "12"
                             FontFamily = "Montserrat"

@@ -6,8 +6,8 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <AssemblyName>JSCLicenceManager</AssemblyName>
-    <AssemblyVersion>1.0.2303.19</AssemblyVersion>
-    <FileVersion>2023.3.0.19</FileVersion>
+    <AssemblyVersion>1.0.2303.24</AssemblyVersion>
+    <FileVersion>2023.3.0.24</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="EventModels\" />
     <Folder Include="Helpers\" />
   </ItemGroup>
 

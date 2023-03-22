@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Caliburn.Micro;
+using JSCLMDestopUI.EventModels;
 using JSCLMDestopUI.Library.Api;
 using JSCLMDestopUI.Models;
 using System;
@@ -17,6 +18,7 @@ public class CustomerViewModel : Screen
 
     private readonly ICustomerEndpoint _customerEndpoint;
     private readonly IMapper _mapper;
+    private readonly IEventAggregator _events;
 
     public BindingList<CustomerDisplayModel>? Customers
     {
@@ -28,10 +30,11 @@ public class CustomerViewModel : Screen
         }
     }
 
-    public CustomerViewModel(ICustomerEndpoint customerEndpoint, IMapper mapper)
+    public CustomerViewModel(ICustomerEndpoint customerEndpoint, IMapper mapper, IEventAggregator events)
     {
         _customerEndpoint = customerEndpoint;
         _mapper = mapper;
+        _events = events;
         _customers = null;
     }
 
@@ -48,5 +51,12 @@ public class CustomerViewModel : Screen
         var customers = _mapper.Map<List<CustomerDisplayModel>>(customerList);
         Customers = new BindingList<CustomerDisplayModel>(customers);
 
+    }
+
+    public async void AddNewCustomer()
+    {
+        // send a message to the main view to load a new screen
+
+        await _events.PublishOnUIThreadAsync(new AddNewCustomerEvent());
     }
 }

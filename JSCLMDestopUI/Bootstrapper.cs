@@ -8,6 +8,11 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Data.SqlTypes;
 using JSCLMDestopUI.Library.Api;
+using System.Globalization;
+using System.Windows.Markup;
+using AutoMapper;
+using JSCLMDestopUI.Models;
+using JSCLMDestopUI.Library.Models;
 
 namespace JSCLMDestopUI;
 
@@ -18,6 +23,22 @@ public class Bootstrapper : BootstrapperBase
     public Bootstrapper()
     {
         Initialize();
+
+        FrameworkElement.LanguageProperty.OverrideMetadata(typeof(FrameworkElement),
+            new FrameworkPropertyMetadata(XmlLanguage.GetLanguage(
+                CultureInfo.CurrentCulture.IetfLanguageTag)));
+
+    }
+
+    private IMapper ConfigureAutomapper()
+    {
+        var config = new MapperConfiguration(cfg =>
+        {
+            cfg.CreateMap<CustomerModel, CustomerDisplayModel>();
+        });
+
+        return config.CreateMapper();
+
     }
 
     protected override void OnStartup(object sender, StartupEventArgs e)
@@ -27,6 +48,11 @@ public class Bootstrapper : BootstrapperBase
 
     protected override void Configure()
     {
+        _container.Instance(ConfigureAutomapper());
+
+        _container.Instance(_container)
+            .PerRequest<ICustomerEndpoint, CustomerEndpoint>();
+
         _container
             .Singleton<IWindowManager, WindowManager>()
             .Singleton<IEventAggregator, EventAggregator>()

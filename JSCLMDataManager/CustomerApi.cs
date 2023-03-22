@@ -8,11 +8,11 @@ namespace JSCLMDataManager
         public static void ConfigureCustomerApi(this WebApplication app)
         {
             // All of my API Endpoint mapping
-            app.MapGet("/Customers", GetCustomers);
-            app.MapGet("/Customers/{id}", GetCustomer);
-            app.MapPost("/Customers", InsertCustomer);
-            app.MapPut("/Customers", UpdateCustomer);
-            app.MapDelete("/Customers", DeleteCustomer);
+            app.MapGet("api/Customers", GetCustomers);
+            app.MapGet("api/Customers/{id}", GetCustomer);
+            app.MapPost("api/Customers", InsertCustomer);
+            app.MapPut("api/Customers", UpdateCustomer);
+            app.MapDelete("api/Customers", DeleteCustomer);
         }
 
         private static async Task<IResult> GetCustomers(ICustomerData data)

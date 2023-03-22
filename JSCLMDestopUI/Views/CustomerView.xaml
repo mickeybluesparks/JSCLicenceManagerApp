@@ -73,7 +73,7 @@
                 Background = "#200F53"
                 CornerRadius = "10" 
                 Padding = "10" >
-            <DataGrid x:Name ="CustomerDataGrid" ItemsSource="{Binding Customers}"
+            <DataGrid x:Name ="Customers"
                 ColumnWidth = "*" 
                   Background = "#200F53"
                   BorderThickness = "0" AutoGenerateColumns="False"
@@ -92,7 +92,7 @@
                     <DataGridTextColumn Binding = "{Binding Id}" ClipboardContentBinding = "{Binding Id}" Header = "ID" HeaderStringFormat = "" />
                     <DataGridTextColumn Binding = "{Binding FirstName}" ClipboardContentBinding = "{Binding FirstName}" Header = "First name" />
                     <DataGridTextColumn Binding = "{Binding LastName}" ClipboardContentBinding = "{Binding LastName}" Header = "Last name" />
-                    <DataGridTextColumn Binding = "{Binding Email}" ClipboardContentBinding = "{Binding Email}" Header = "Email" />
+                    <DataGridTextColumn Binding = "{Binding EmailAddress}" ClipboardContentBinding = "{Binding Email}" Header = "Email" />
                     <DataGridTextColumn Binding = "{Binding Active}" ClipboardContentBinding = "{Binding Active}" Header = "Active" />
                 </DataGrid.Columns >
                 <DataGrid.ContextMenu>

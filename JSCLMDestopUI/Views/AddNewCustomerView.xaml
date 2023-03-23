@@ -48,9 +48,7 @@
                                     FontSize="16"
                                     FontFamily="Montserrat"
                                     FontWeight="Medium" Margin="10, 0,0,0"/>
-                            <TextBox Text="{Binding FirstName, 
-                                                Mode=TwoWay,
-                                            UpdateSourceTrigger=PropertyChanged}"
+                            <TextBox x:Name="FirstName"
                                         Height="20"
                                         Width="500"
                                     Foreground="{StaticResource titleColor2}"
@@ -67,8 +65,7 @@
                                     FontSize="16"
                                     FontFamily="Montserrat"
                                     FontWeight="Medium" Margin="10, 0,0,0"/>
-                            <TextBox Text="{Binding LastName, Mode=TwoWay,
-                                            UpdateSourceTrigger=PropertyChanged}"
+                            <TextBox x:Name="LastName"
                                         Height="20"
                                         Width="500"
                                     Foreground="{StaticResource titleColor2}"
@@ -85,8 +82,7 @@
                                     FontSize="16"
                                     FontFamily="Montserrat"
                                     FontWeight="Medium" Margin="10, 0,0,0"/>
-                            <TextBox Text="{Binding EmailAddress, Mode=TwoWay,
-                                            UpdateSourceTrigger=PropertyChanged}"
+                            <TextBox x:Name="EmailAddress"
                                         Height="20"
                                         Width="500"
                                     Foreground="{StaticResource titleColor2}"
@@ -114,8 +110,7 @@
                         Cursor = "Hand"
                         BorderThickness = "0"
                         Foreground = "White"
-                VerticalAlignment = "Top" Margin="10,0,10,0" 
-                    Command="{Binding SaveCustomer}">
+                VerticalAlignment = "Top" Margin="10,0,10,0" x:Name="SaveCustomer" >
 
                                     <Button.Style >
                                         <Style TargetType = "Button" >
@@ -152,7 +147,7 @@
                         Foreground = "White"
                 VerticalAlignment = "Top" 
                         Margin="10,0,10,0" 
-                        Command="{Binding Cancel}" >
+                        x:Name="Cancel">
 
                                     <Button.Style >
                                         <Style TargetType = "Button" >

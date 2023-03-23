@@ -93,7 +93,7 @@
                     <DataGridTextColumn Binding = "{Binding FirstName}" ClipboardContentBinding = "{Binding FirstName}" Header = "First name" />
                     <DataGridTextColumn Binding = "{Binding LastName}" ClipboardContentBinding = "{Binding LastName}" Header = "Last name" />
                     <DataGridTextColumn Binding = "{Binding EmailAddress}" ClipboardContentBinding = "{Binding Email}" Header = "Email" />
-                    <DataGridTextColumn Binding = "{Binding Active}" ClipboardContentBinding = "{Binding Active}" Header = "Active" />
+                    <DataGridTextColumn Binding = "{Binding IsActive}" ClipboardContentBinding = "{Binding Active}" Header = "Active" />
                 </DataGrid.Columns >
                 <DataGrid.ContextMenu>
                     <ContextMenu>

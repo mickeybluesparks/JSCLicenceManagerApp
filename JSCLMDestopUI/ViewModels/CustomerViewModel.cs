@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,12 +31,39 @@ public class CustomerViewModel : Screen
         }
     }
 
+    private CustomerDisplayModel? _selectedCustomer;
+
+    public CustomerDisplayModel? SelectedCustomer
+    {
+        get { return _selectedCustomer; }
+        set 
+        { 
+            _selectedCustomer = value; 
+            NotifyOfPropertyChange(() => SelectedCustomer);
+            NotifyOfPropertyChange(() => CanCheckLicence);
+        }
+    }
+
+    public bool CanCheckLicence
+    {
+        get
+        {
+            if (SelectedCustomer == null)
+            {
+                return false;
+            }
+
+            return true;
+        }
+    }
+
     public CustomerViewModel(ICustomerEndpoint customerEndpoint, IMapper mapper, IEventAggregator events)
     {
         _customerEndpoint = customerEndpoint;
         _mapper = mapper;
         _events = events;
         _customers = null;
+        _selectedCustomer = null;
     }
 
     protected override async void OnViewLoaded(object view)
@@ -58,5 +86,13 @@ public class CustomerViewModel : Screen
         // send a message to the main view to load a new screen
 
         await _events.PublishOnUIThreadAsync(new AddNewCustomerEvent());
+    }
+
+    public async void CheckLicence()
+    {
+        // send a message to the main view to load the licence screen for the selected user
+
+        await _events.PublishOnUIThreadAsync(new CheckUserLicenceEvent(SelectedCustomer));
+
     }
 }

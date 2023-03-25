@@ -67,6 +67,10 @@
     <Build Include="dbo\Stored Procedures\spCustomer_Get.sql" />
     <Build Include="dbo\Stored Procedures\spCustomer_Insert.sql" />
     <Build Include="dbo\Stored Procedures\spCustomerData_Update.sql" />
+    <Build Include="dbo\tables\LicenceData.sql" />
+    <Build Include="dbo\tables\LicenceTypes.sql" />
+    <Build Include="dbo\Stored Procedures\spLicence_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\spLicenceTypes_GetAll.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PublishLocations\LMData.publish.xml" />

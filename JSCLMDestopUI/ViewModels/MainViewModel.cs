@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace JSCLMDestopUI.ViewModels;
 
-public class MainViewModel : Conductor<object>, IHandle<AddNewCustomerEvent>
+public class MainViewModel : Conductor<object>, IHandle<AddNewCustomerEvent>, IHandle<DisplayCustomerListEvent>
 {
     private readonly IEventAggregator _events;
     private readonly CustomerViewModel _customerVM;
@@ -27,6 +27,13 @@ public class MainViewModel : Conductor<object>, IHandle<AddNewCustomerEvent>
     public Task HandleAsync(AddNewCustomerEvent message, CancellationToken cancellationToken)
     {
         ActivateItemAsync(_addNewCustomerVM);
+
+        return Task.CompletedTask;
+    }
+
+    public Task HandleAsync(DisplayCustomerListEvent message, CancellationToken cancellationToken)
+    {
+        ActivateItemAsync(_customerVM);
 
         return Task.CompletedTask;
     }

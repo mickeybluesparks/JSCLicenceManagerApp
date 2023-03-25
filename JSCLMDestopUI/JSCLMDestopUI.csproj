@@ -6,8 +6,8 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <AssemblyName>JSCLicenceManager</AssemblyName>
-    <AssemblyVersion>1.0.2303.27</AssemblyVersion>
-    <FileVersion>2023.3.0.27</FileVersion>
+    <AssemblyVersion>1.0.2303.31</AssemblyVersion>
+    <FileVersion>2023.3.0.31</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

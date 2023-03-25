@@ -34,4 +34,22 @@ public class CustomerEndpoint : ICustomerEndpoint
         }
     }
 
+    public async Task AddNewCustomer(CustomerModel customer)
+    {
+        using (HttpResponseMessage response = await _apiHelper.ApiClient.PostAsJsonAsync("api/Customers", customer))
+        {
+            if (response.IsSuccessStatusCode)
+            {
+                // Log sucessful call?
+            }
+            else
+            {
+                throw new Exception($"{response.ReasonPhrase}");
+            }
+
+        }
+
+    }
+
+
 }

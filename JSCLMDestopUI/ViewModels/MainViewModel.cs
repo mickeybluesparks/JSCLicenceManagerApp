@@ -12,38 +12,39 @@ namespace JSCLMDestopUI.ViewModels;
 public class MainViewModel : Conductor<object>, IHandle<AddNewCustomerEvent>, IHandle<DisplayCustomerListEvent>, IHandle<CheckUserLicenceEvent>
 {
     private readonly IEventAggregator _events;
-    private readonly CustomerViewModel _customerVM;
-    private readonly AddNewCustomerViewModel _addNewCustomerVM;
 
-    public MainViewModel(IEventAggregator events, CustomerViewModel customerVM, AddNewCustomerViewModel addNewCustomerVM )
+    public MainViewModel(IEventAggregator events )
     {
         _events = events;
-        _customerVM = customerVM;
-        _addNewCustomerVM = addNewCustomerVM;
         _events.SubscribeOnUIThread(this);
-        ActivateItemAsync(_customerVM);
+        ActivateItemAsync(IoC.Get<CustomerViewModel>());
     }
 
-    public Task HandleAsync(AddNewCustomerEvent message, CancellationToken cancellationToken)
+    public async Task DisplayAllLicences()
     {
-        ActivateItemAsync(_addNewCustomerVM);
-
-        return Task.CompletedTask;
+        await ActivateItemAsync(IoC.Get<LicenceViewModel>());
     }
 
-    public Task HandleAsync(DisplayCustomerListEvent message, CancellationToken cancellationToken)
+    public async Task HandleAsync(AddNewCustomerEvent message, CancellationToken cancellationToken)
     {
-        ActivateItemAsync(_customerVM);
+        await ActivateItemAsync(IoC.Get<AddNewCustomerViewModel>());
 
-        return Task.CompletedTask;
+        return;
     }
 
-    public Task HandleAsync(CheckUserLicenceEvent message, CancellationToken cancellationToken)
+    public async Task HandleAsync(DisplayCustomerListEvent message, CancellationToken cancellationToken)
+    {
+        await ActivateItemAsync(IoC.Get<CustomerViewModel>());
+
+        return;
+    }
+
+    public async Task HandleAsync(CheckUserLicenceEvent message, CancellationToken cancellationToken)
     {
 
-        Console.WriteLine();
+        await ActivateItemAsync(IoC.Get<LicenceViewModel>());
 
-        return Task.CompletedTask;
+        return;
 
     }
 }

@@ -41,10 +41,25 @@ public class CustomerViewModel : Screen
             _selectedCustomer = value; 
             NotifyOfPropertyChange(() => SelectedCustomer);
             NotifyOfPropertyChange(() => CanCheckLicence);
+            NotifyOfPropertyChange(() => CanEditCustomer);
+
         }
     }
 
     public bool CanCheckLicence
+    {
+        get
+        {
+            if (SelectedCustomer == null)
+            {
+                return false;
+            }
+
+            return true;
+        }
+    }
+
+    public bool CanEditCustomer
     {
         get
         {
@@ -93,6 +108,12 @@ public class CustomerViewModel : Screen
         // send a message to the main view to load the licence screen for the selected user
 
         await _events.PublishOnUIThreadAsync(new CheckUserLicenceEvent(SelectedCustomer));
+
+    }
+
+    public async void EditCustomer()
+    {
+
 
     }
 }

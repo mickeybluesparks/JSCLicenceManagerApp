@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="JSCLMDestopUI.Views.CustomerView"
+﻿<UserControl x:Class="JSCLMDestopUI.Views.LicenceView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -76,7 +76,7 @@
                 Background = "#200F53"
                 CornerRadius = "10" 
                 Padding = "10" >
-            <DataGrid x:Name ="Customers" SelectedItem="SelectedCustomer"
+            <DataGrid x:Name ="Licences" SelectedItem="SelectedLicence"
                 ColumnWidth = "*" 
                   Background = "#200F53"
                   BorderThickness = "0" AutoGenerateColumns="False"
@@ -93,10 +93,10 @@
                 </DataGrid.ColumnHeaderStyle >
                 <DataGrid.Columns >
                     <DataGridTextColumn Binding = "{Binding Id}" ClipboardContentBinding = "{Binding Id}" Header = "ID" HeaderStringFormat = "" />
-                    <DataGridTextColumn Binding = "{Binding FirstName}" ClipboardContentBinding = "{Binding FirstName}" Header = "First name" />
-                    <DataGridTextColumn Binding = "{Binding LastName}" ClipboardContentBinding = "{Binding LastName}" Header = "Last name" />
-                    <DataGridTextColumn Binding = "{Binding EmailAddress}" ClipboardContentBinding = "{Binding Email}" Header = "Email" />
-                    <DataGridTextColumn Binding = "{Binding IsActive}" ClipboardContentBinding = "{Binding Active}" Header = "Active" />
+                    <DataGridTextColumn Binding = "{Binding Name}" ClipboardContentBinding = "{Binding Name}" Header = "Licence Type" />
+                    <DataGridTextColumn Binding = "{Binding StartDate}" ClipboardContentBinding = "{Binding StartDate}" Header = "Start Date" />
+                    <DataGridTextColumn Binding = "{Binding EndDate}" ClipboardContentBinding = "{Binding EndDate}" Header = "End Date" />
+                    <DataGridTextColumn Binding = "{Binding LastChangedDate}" ClipboardContentBinding = "{Binding LastChangedDate}" Header = "Last Changed On" />
                 </DataGrid.Columns >
                 <DataGrid.ContextMenu>
                     <ContextMenu>
@@ -120,8 +120,8 @@
                         <ColumnDefinition SharedSizeGroup="A"/>
                     </Grid.ColumnDefinitions>
 
-                    <Button Grid.Column="0" x:Name="AddNewCustomer"   
-                    Content = "Add new Customer"                            
+                    <Button Grid.Column="0" x:Name="Button1"   
+                    Content = "Button #1"                            
                             FontSize = "12"
                             FontFamily = "Montserrat"
                             Cursor = "Hand"
@@ -159,7 +159,7 @@
                     </Button>
 
                     <Button     Grid.Column="1"
-                    Content = "Edit Customer" x:Name="EditCustomer"                           
+                    Content = "Button #2" x:Name="Button2"                           
                             FontSize = "12"
                             FontFamily = "Montserrat"
                             Cursor = "Hand"
@@ -199,7 +199,7 @@
                     </Button>
 
                     <Button     Grid.Column="2"
-                    Content = "Check Licence" x:Name="CheckLicence"                           
+                    Content = "Button #3" x:Name="Button3"                           
                             FontSize = "12"
                             FontFamily = "Montserrat"
                             Cursor = "Hand"

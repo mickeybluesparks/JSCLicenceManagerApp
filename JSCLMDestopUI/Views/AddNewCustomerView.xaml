@@ -7,17 +7,6 @@
               xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
             mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Border CornerRadius="12"
-            BorderThickness="2">
-
-        <Border.BorderBrush>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="{StaticResource winBorderColor1}" Offset="0"/>
-                <GradientStop Color="{StaticResource winBorderColor2}" Offset="0.75"/>
-                <GradientStop Color="{StaticResource winBorderColor3}" Offset="1"/>
-            </LinearGradientBrush>
-        </Border.BorderBrush>
-
         <Grid>
             <Border CornerRadius="0,10,10,0">
 
@@ -187,5 +176,4 @@
 
         </Grid>
 
-    </Border>
 </UserControl>

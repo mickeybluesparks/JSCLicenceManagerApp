@@ -80,8 +80,8 @@
                     </RadioButton>
 
 
-                    <StackPanel></StackPanel>
-                    <RadioButton Style="{StaticResource menuButton}"
+                    <RadioButton x:Name="DisplayAllLicences"
+                        Style="{StaticResource menuButton}"
                                  Tag="{StaticResource color3}"
                                  >
                         <StackPanel Orientation="Horizontal">
